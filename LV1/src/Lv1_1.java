@@ -1,3 +1,6 @@
+/*
+ * 20201021 두 개 뽑아서 더하기 LV1
+ * */
 import java.util.ArrayList;
 import java.util.Arrays;
 
