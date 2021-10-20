@@ -42,3 +42,5 @@ def solution(new_id):
     while len(answer) <= 2:
         answer = answer + answer[-1]
     return answer
+# 해설
+# https://100winone.tistory.com/79
