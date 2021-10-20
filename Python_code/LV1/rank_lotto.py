@@ -9,4 +9,5 @@ def solution(lottos, win_nums):
     answer[0] = rank[ans + zero_cnt]
     answer[1] = rank[ans]
     return answer
-# 해설 https://100winone.tistory.com/79
+# 해설
+# https://100winone.tistory.com/78
