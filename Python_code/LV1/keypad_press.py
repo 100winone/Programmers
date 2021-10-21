@@ -40,4 +40,4 @@ def solution(numbers, hand):
     return answer
 
 # 해설
-# https://100winone.tistory.com/80
+# https://100winone.tistory.com/81
