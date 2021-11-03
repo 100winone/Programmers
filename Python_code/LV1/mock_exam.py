@@ -14,6 +14,6 @@ def solution(answers):
         correct_arr.append(cnt)
     max_val = max(correct_arr)
     for i in range(len(correct_arr)):
-        if correct_arr[i] == max_val:사
+        if correct_arr[i] == max_val:
             answer.append(i + 1)
     return answer
