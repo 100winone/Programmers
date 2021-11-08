@@ -35,3 +35,5 @@ def solution(n, lost, reserve):
             answer += 1
 
     return answer
+
+# 파이썬 remove, set 공부 하면 조금 더 쉽게 풀 수 있는 문제
