@@ -7,10 +7,8 @@ def diff(a_word, b_word):
     for i in range(0, len(a_word)):
         if a_word[i] != b_word[i]:
             dif_cnt += 1
-    if dif_cnt == 1:
-        return dif_cnt
-    else:
-        return 0
+
+    return 1 if dif_cnt == 1 else 0
 
 
 def dfs(begin, target, words, cnt):
