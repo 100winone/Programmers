@@ -1,6 +1,5 @@
 checked = [0 for _ in range(201)]
 
-
 def bfs(n, computers ,x):
     # q = []
     # q.append(x) 아래 하나로 선언
