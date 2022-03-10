@@ -112,6 +112,71 @@ a.remove(1)
 print("값이 1인 데이터 삭제: ", a) # 값이 1인 데이터 삭제: [2, 3, 3, 4]
 ```
 
-
+```특정 원소 지우는 리스트 컴프리헨션```
+```python
+a = [1, 2, 3, 4, 5, 5, 5]
+remove_set = {3, 5}
+result = [i for i in a if i not in remove_set]
+print(result) # [1, 2, 4]
 ```
+
+### 문자열 자료형
+```문자열 연산```
+
+```python
+a = "String"
+print(a * 3) # StringStringString
+
+a = "ABCDEF"
+print(a[2:4]) # CD 
+```
+
+### 튜플 자료형
+```
+- 튜플을 한 번 선언된 값을 변경할 수 없음
+- 리스트 대괄호([])를 이용하지만, 튜플은 소괄호(())를 이용
+```
+
+```python
+a = (1, 2, 3, 4)
+print(a) # (1, 2, 3, 4) 
+```
+
+### 사전 자료형
+```key-value 쌍을 데이터로 가지는 자료형```
+
+```python
+data = dict()
+data['사과'] = 'Apple'
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
+
+print(data) # {'사과': 'Apple', '바나나': 'Banana', '코코넛': 'Coconut'}
+
+if '사과' in data:
+    print("'사과'를 키로 가지는 데이터가 존재합니다.")
+```
+```
+- keys() -> 키 데이터만 뽑아서 리스트로 이용
+- values() -> 값 데이터만을 뽑아서 리스트로 이용
+```
+```python
+data = dict()
+data['사과'] = 'Apple'
+data['바나나'] = 'Banana'
+data['코코넛'] = 'Coconut'
+
+# 키 데이터만 담은 리스트
+key_list = data.keys()
+# 값 데이터만 담은 리스트
+value_list = data.values()
+
+print(key_list) # dict_keys(['사과', '바나나', '코코넛'])
+print(value_list) # dict_values(['Apple', 'Banana', 'Coconut'])
+
+for key in key_list:
+    print(data[key])
+# Apple
+# Banana
+# Coconut
 ```
