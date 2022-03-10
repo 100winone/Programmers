@@ -251,3 +251,17 @@ for i in range(10):
 
 print(a) # 10
 ```
+
+```람다 표현식```
+```python
+def add(a, b):
+    return a + b
+
+# 일반적인 add() 메서드 사용
+print(add(3, 7)) # 10
+
+# 람다 표현식으로 구현한 add() 메서드
+print((lambda a, b: a + b)(3, 7)) # 10
+```
+
+## 입출력
