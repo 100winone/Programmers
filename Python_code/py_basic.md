@@ -286,3 +286,22 @@ import sys
 data = sys.stdin.readline().rstrip() # Hello World
 print(data) # Hello World
 ```
+
+```문자열 출력```
+```python
+a = 1
+b = 2
+print(a, b) # 1 2
+
+print(a)
+print(b)
+# 출력
+# 1 
+# 2
+
+answer = 7
+print("정답은 " + answer + "입니다.") # 에러발생
+print("정답은 " + str(answer) + "입니다.") # 정답은 7입니다.
+print("정답은", str(answer), "입니다.") # 정답은 7 입니다. (콤마로 출력시 띄어쓰기 들어감)
+print(f"정답은 {answer}입니다.") # 정답은 7입니다. #  파이썬 3.6부터 f-string 문법 적용가능 
+```
