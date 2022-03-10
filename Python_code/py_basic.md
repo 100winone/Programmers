@@ -223,5 +223,31 @@ print(data) # {1, 2, 3, 4, 5, 6}
 # 특정한 값을 갖는 원소 삭제
 data.remove(3)
 print(data) # {1, 2, 4, 5, 6}
+```
 
+## 함수
+
+```python
+def add(a, b):
+    return a + b
+print(add(3, 7)) # 10
+
+def add(a, b):
+    print('함수의 결과:', a + b)
+
+add(b = 3, a = 7)
+```
+
+```함수 안에서 함수 밖의 변수 데이터 변경 시 global 키워드 사용```
+```python
+a = 0
+
+def func():
+    global a
+    a += 1
+
+for i in range(10):
+    func()
+
+print(a) # 10
 ```
