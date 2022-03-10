@@ -305,3 +305,36 @@ print("정답은 " + str(answer) + "입니다.") # 정답은 7입니다.
 print("정답은", str(answer), "입니다.") # 정답은 7 입니다. (콤마로 출력시 띄어쓰기 들어감)
 print(f"정답은 {answer}입니다.") # 정답은 7입니다. #  파이썬 3.6부터 f-string 문법 적용가능 
 ```
+
+
+## 주요 라이브러리의 문법과 유의점
+### 내장 함수
+```python
+# eval - 문자열로 들어오는 수식을 계산한 결과를 반환
+result = eval("(3 + 5) * 7")
+print(result) # 56
+
+result = sorted([('아무개', 50), ('이순신', 75), ('홍길동', 35)], key=lambda x: x[1], reverse=True)
+print(result) # [('이순신', 75), ('아무개', 50), ('홍길동', 35)]
+```
+
+### itertools
+>```반복되는 데이터를 처리하는 기능을 포함하는 라이브러리```
+
+```순열```
+```python
+from itertools import permutations
+
+data = ['A', 'B', 'C']
+result = list(permutations(data, 3)) # 모든 순열 구하기
+print(result) # [('A', 'B', 'C'), ('A', 'C', 'B'), ('B', 'A', 'C'), ('B', 'C', 'A'), ('C', 'A', 'B'), ('C', 'B', 'A')]
+```
+
+```조합```
+```python
+from itertools import combinations
+
+data = ['A', 'B', 'C']
+result = list(combinations(data, 2)) # 모든 순열 구하기
+print(result) # [('A', 'B'), ('A', 'C'), ('B', 'C')]
+```
