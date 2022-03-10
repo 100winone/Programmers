@@ -265,3 +265,24 @@ print((lambda a, b: a + b)(3, 7)) # 10
 ```
 
 ## 입출력
+
+```python
+# 데이터 개수 입력
+n = int(input()) # 5 입력
+
+# 각 데이터를 공백으로 구분하여 입력
+data = list(map(int, input().split())) # 65 90 75 34 99 , 리스트로 입력
+print(data) # [65, 90, 75, 34, 99]
+
+n, m, k = map(int, input().split()) # 3 5 7
+print(n, m, k) # 3 5 7
+```
+
+```readline() 사용 소스코드 얘시```
+```python
+import sys
+
+# 문자열 입력받기
+data = sys.stdin.readline().rstrip() # Hello World
+print(data) # Hello World
+```
