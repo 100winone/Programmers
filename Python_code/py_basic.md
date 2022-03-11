@@ -433,7 +433,6 @@ print(list(data)) # [1, 2, 3, 4, 5] 리스트 자료형으로 변환
 ```collections - Counter```
 
 >원소별 등장 횟수 세는 기능 제공
-
 ```python
 from collections import Counter
 
