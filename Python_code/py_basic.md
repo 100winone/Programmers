@@ -338,3 +338,95 @@ data = ['A', 'B', 'C']
 result = list(combinations(data, 2)) # 모든 순열 구하기
 print(result) # [('A', 'B'), ('A', 'C'), ('B', 'C')]
 ```
+
+```product```
+```python
+from itertools import product
+
+data = ['A', 'B', 'C']
+result = list(product(data, repeat=2)) # 2개를 뽑는 모든 순열 구하기 (중복 허용)
+print(result) # [('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'A'), ('B', 'B'), ('B', 'C'), ('C', 'A'), ('C', 'B'), ('C', 'C')]
+```
+
+```combination_with_replacement```
+```python
+from itertools import combinations_with_replacement
+
+data = ['A', 'B', 'C']
+result = list(combinations_with_replacement(data, 2)) # 2개를 뽑는 모든 조합 구하기 (중복 허용)
+print(result) # ('A', 'A'), ('A', 'B'), ('A', 'C'), ('B', 'B'), ('B', 'C'), ('C', 'C')]`
+```
+
+```headq```
+```
+- 파이썬의 힙은 최소 힙으로 구성되어 있음
+- 단순히 원소를 힙에 넣었다가 빼는 것만으로도 O(NlogN)에 오름차순 정렬이 완료
+- 최상단 원소가 가장 작은 원소
+```
+```python
+# 최소 힙
+import heapq
+
+def heapsort(iterable):
+    h = []
+    result = []
+    # 모든 원소를 차례대로 힙에 삽입
+    for value in iterable:
+        heapq.heappush(h, value)
+
+    # 힙에 삽입된 모든 원소를 차례대로 꺼내어 담기
+    for i in range(len(h)):
+        result.append(heapq.heappop(h))
+    return result
+
+result = heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
+print(result) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+```python
+# 최대 힙
+import heapq
+
+def heapsort(iterable):
+    h = []
+    result = []
+    # 모든 원소를 차례대로 힙에 삽입
+    for value in iterable:
+        heapq.heappush(h, -value)
+
+    # 힙에 삽입된 모든 원소를 차례대로 꺼내어 담기
+    for i in range(len(h)):
+        result.append(-heapq.heappop(h))
+    return result
+
+result = heapsort([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])
+print(result) # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+```
+
+```bisect```
+```
+- bisect_left(a, x): 정렬된 순서를 유지하면서 리스트 a에 데이터 x를 삽입할 가장 왼쪽 인덱스를 찾는 메서드
+- bisect_right(a, x): 정렬된 순서를 유지하면서 리스트 a에 데이터 x를 삽입할 가장 오른쪽 인덱스를 찾는 메서드
+- '정렬된 리스트'에서 값이 특정 범위에 속하는 원소의 개수를 구하고자 할 때 효과적 
+```
+
+```python
+from bisect import bisect_left, bisect_right
+
+a = [1, 2, 4, 4, 8]
+x = 4
+print(bisect_left(a, x))  # 2
+print(bisect_right(a, x)) # 4
+```
+```collections - deque```
+
+```python
+from collections import deque
+
+data = deque([2, 3, 4])
+data.appendleft(1)
+data.append(5)
+
+print(data)
+print(list(data)) # 리스트 자료형으로 변환 
+```
