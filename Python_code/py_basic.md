@@ -444,6 +444,7 @@ print(dict(counter)) # {'red': 2, 'blue': 3, 'green': 1} 사전 자료형으로 
 
 
 ## 기타 문제 풀면서 유용한 알고리즘
+> 입력이 위처럼 들어갈 때, 점수별로 오름차순 하는 경우
 ```python
 '''
  홍길동 95
@@ -452,3 +453,4 @@ print(dict(counter)) # {'red': 2, 'blue': 3, 'green': 1} 사전 자료형으로 
 '''
 array = sorted(array, key=lambda x:x[1])
 ```
+
