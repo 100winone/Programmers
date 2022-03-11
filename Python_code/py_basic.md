@@ -427,6 +427,6 @@ data = deque([2, 3, 4])
 data.appendleft(1)
 data.append(5)
 
-print(data)
-print(list(data)) # 리스트 자료형으로 변환 
+print(data) # deque([1, 2, 3, 4, 5])
+print(list(data)) # [1, 2, 3, 4, 5] 리스트 자료형으로 변환 
 ```
