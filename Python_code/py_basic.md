@@ -419,7 +419,6 @@ print(bisect_left(a, x))  # 2
 print(bisect_right(a, x)) # 4
 ```
 ```collections - deque```
-
 ```python
 from collections import deque
 
@@ -429,4 +428,17 @@ data.append(5)
 
 print(data) # deque([1, 2, 3, 4, 5])
 print(list(data)) # [1, 2, 3, 4, 5] 리스트 자료형으로 변환 
+```
+
+```collections - Counter```
+
+>원소별 등장 횟수 세는 기능 제공
+
+```python
+from collections import Counter
+
+counter = Counter(['red', 'blue', 'red', 'green', 'blue', 'blue'])
+print(counter['blue']) # 3 'blue'가 등장한 횟수 출력
+print(counter['green']) # 1 'green'이 등장한 횟수 출력
+print(dict(counter)) # {'red': 2, 'blue': 3, 'green': 1} 사전 자료형으로 변환 
 ```
