@@ -1,4 +1,4 @@
-# 특정 거리의 도시 찾기
+# 특정 거리의 도시 찾기 (SILVER2)
 # https://www.acmicpc.net/problem/18352
 # BFS
 # 20220313
