@@ -1,7 +1,7 @@
 # 이것이 코딩테스트다 with python
 
 ## Solved Count
-> 4 / 45
+> 5 / 45
 
 
 
