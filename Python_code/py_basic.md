@@ -472,3 +472,9 @@ graph = [[] for i in range(4)] # 2차원 배열 생성
 
 print(graph) # [[], [], [], []]
 ```
+
+```python
+#파이썬 문자열 정렬시
+tmp_str = ''.join(sorted(tmp_str))
+# tmp_str이 KKACB일 때 -> ABCKK 로 변환 
+```
