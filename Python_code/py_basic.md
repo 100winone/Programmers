@@ -478,3 +478,23 @@ print(graph) # [[], [], [], []]
 tmp_str = ''.join(sorted(tmp_str))
 # tmp_str이 KKACB일 때 -> ABCKK 로 변환 
 ```
+
+```python
+# heapq 사용 (최소 힙)
+import heapq
+
+# 시간이 적은 음식부터 빼야하므로 우선순위 큐 이용
+q = []
+heapq.heappush(q, (1, 2))
+heapq.heappush(q, (7, 1))
+heapq.heappush(q, (4, 4))
+heapq.heappush(q, (2, 3))
+
+print(q) # [(1, 2), (2, 3), (4, 4), (7, 1)] 앞에 원소기준으로 최소 힙 정렬
+now = heapq.heappop(q)
+print(now) # (1, 2)
+
+answer = sorted(q, key=lambda x: x[1]) # 뒤 원소 순서로 오름차순 정렬
+print(answer) # [(7, 1), (2, 3), (4, 4)]
+
+```
