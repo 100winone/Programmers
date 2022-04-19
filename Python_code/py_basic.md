@@ -496,5 +496,15 @@ print(now) # (1, 2)
 
 answer = sorted(q, key=lambda x: x[1]) # 뒤 원소 순서로 오름차순 정렬
 print(answer) # [(7, 1), (2, 3), (4, 4)]
+```
 
+### 세부 정렬
+```python
+# 백준 국영수 (10825번 문제 참고)
+n = int(input())
+student = []
+for i in range(n):
+    student.append(input().split())
+# 두 번째 원소 내림차순, 세 번째 원소 오름차순, 네 번째 원소 내림차순, 첫 번째 원소 오름차순
+student.sort(key=lambda x: (-int(x[1]), int(x[2]), -int(x[3]), x[0]))
 ```
